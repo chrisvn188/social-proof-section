@@ -20,12 +20,44 @@ body{
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.5;
+  padding: 5em 1em;
+  position: relative;
+
+}
+
+body::before{
+  content: url(images/bg-pattern-top-mobile.svg);
+  display: block;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+
+body::after{
+  content: url(images/bg-pattern-bottom-mobile.svg);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (min-width:1140px) {
+  body::before{
+    content: url(images/bg-pattern-top-desktop.svg);
+    
+  }
+  
+  body::after{
+    content: url(images/bg-pattern-bottom-desktop.svg);
+    
+  }
 }
 
 .container{
   max-width: 23em;
-  margin: 5em auto;
   text-align: center;
+  /* background-color: darkcyan; */
+  margin: 0 auto;
 }
 
 .text-container{
